@@ -17,5 +17,5 @@ going “DIRECTION” using the api defined at http://svc.metrotransit.org/ .
 25 Minutes
 
 $python get_next_bus.py "METRO Blue Line" "Target Field Station Platform 1" southe
-Unable to find the direction southe for the Route name (METRO Blue Line) entered!!!. 
+Unable to find the direction (southe) for the Route name (METRO Blue Line) entered!!!. 
 ```
