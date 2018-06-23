@@ -1,0 +1,31 @@
+--Success calls with full names passed---
+$python get_next_bus.py  "METRO Blue Line" "Target Field Station Platform 1" south
+7 Minutes
+
+$python get_next_bus.py  "METRO Blue Line" "Target Field Station Platform 1" north
+12 Minutes
+
+--Success calls with partial names passed---
+
+$python get_next_bus.py  "64 - Payne - Maryland - White Bear Av - Maplewood" "Wall St" east
+19 Minutes
+
+$python get_next_bus.py  "64 - Payne - Maryland - White Bear Av - Maplewood" "Wall St" west
+24 Minutes
+
+$python get_next_bus.py  "64 - Payne - Marylan" "Wall St" west
+24 Minutes
+
+--Failure calls---
+$python get_next_bus.py  "Express - Target - Hwy 252 and 73rd Av P&R - Mpls" "Target North Campus Building F" south
+Unable to find the details for the Route name (Express - Target - Hwy 252 and 73rd Av P&R - Mpls) entered!!!. 
+
+$python get_next_bus.py  "METRO Blue Line" "Target Field Station Platform 1" east
+Unable to find the direction (east) for the Route name (METRO Blue Line) entered!!!. 
+
+$python get_next_bus.py  "METRO Blue Line" "New York" north
+Unable to find the stop (New York) for the Route name (METRO Blue Line) for the direction (north) entered!!!. 
+
+--Script Usage---
+$python get_next_bus.py  "METRO Blue Line" "New York"
+Usage is: get_next_bus.py bus_route stop_name direction
