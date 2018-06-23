@@ -71,14 +71,14 @@ def main():
     direction_id = get_route_info(base_url + "NexTrip/Directions/" + str(route_id), direction, "Text", "Value")
     # Exit if the direction identification was unsuccessful
     if direction_id == -1:
-        print("Unable to find the direction {0} for the Route name ({1}) entered!!!. ".format(direction, bus_route))
+        print("Unable to find the direction ({0}) for the Route name ({1}) entered!!!. ".format(direction, bus_route))
         sys.exit(1)
 
     # Get the bus stop id
     stop_id = get_route_info(base_url + "NexTrip/Stops/" + str(route_id) + "/" + str(direction_id), stop_name, "Text", "Value")
     # Exit if the stop identification was unsuccessful
     if stop_id == -1:
-        print("Unable to find the stop {0} for the Route name ({1}) for the direction {2}entered!!!. ".format(stop_name, bus_route, direction))
+        print("Unable to find the stop ({0}) for the Route name ({1}) for the direction ({2}) entered!!!. ".format(stop_name, bus_route, direction))
         sys.exit(1)
 
     # Get the departure timestamp for the stop_id in the given direction
